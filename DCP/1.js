@@ -10,6 +10,6 @@
 
 // Source: https://www.dailycodingproblem.com/
 
-export default function dailyCode() {
+export default function dailyCode(list, k) {
   console.log('dc')
 }

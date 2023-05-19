@@ -16,6 +16,8 @@
 // Leading zeros (e.g. 01.02.03.04) are considered invalid
 // Inputs are guaranteed to be a single string
 
+// SOLUTION:
+
 export default function isValidIP(str) {
   // check for exactly four octets
   const arr = str.split('.')
