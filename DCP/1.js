@@ -9,3 +9,7 @@
 // SOLUTION:
 
 // Source: https://www.dailycodingproblem.com/
+
+export default function dailyCode() {
+  console.log('dailycode')
+}
