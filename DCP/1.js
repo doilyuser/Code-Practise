@@ -10,6 +10,6 @@
 
 // Source: https://www.dailycodingproblem.com/
 
-export default function dailyCode() {
-  console.log('dc')
+function isValidIP(str) {
+  return false
 }
