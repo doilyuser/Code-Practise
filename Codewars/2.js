@@ -9,18 +9,33 @@
 // Invalid characters should be ignored.
 
 export default function parse(data) {
-  return data
+  const res = []
+  let val = 0
+  for (const ele of data) {
+    switch (ele) {
+      case 'i':
+        val++
+        break
+      case 'd':
+        val--
+        break
+      case 's':
+        val *= val
+        break
+      case 'o':
+        res.push(val)
+    }
+  }
+  return res
 }
-
-// The case 'ssoisddo' should have resualted in [ 0,-1 ] not [ 8,64 ]
-// The case 'odioodoo' should have resualted in [ 0,0,0,-1,-1 ] not [ 8,64 ]
-// The case 'dddsdooo' should have resualted in [ 8,8,8 ] not [ 8,64 ]
-// The case 'ddsdsioo' should have resualted in [ 10,10 ] not [ 8,64 ]
-// The case 'ooodsodo' should have resualted in [ 0,0,0,1,0 ] not [ 8,64 ]
-// The case 'iooososo' should have resualted in [ 1,1,1,1,1 ] not [ 8,64 ]
-// The case 'ioosdsoo' should have resualted in [ 1,1,0,0 ] not [ 8,64 ]
-// The case 'didddsoo' should have resualted in [ 9,9 ] not [ 8,64 ]
 
 // TESTS:
 
 console.log('[ 0,-1 ]: ' + parse('ssoisddo'))
+console.log('[ 0,0,0,-1,-1 ]: ' + parse('odioodoo'))
+console.log('[ 8,8,8 ]: ' + parse('dddsdooo'))
+console.log('[ 10,10 ]: ' + parse('ddsdsioo'))
+console.log('[ 0,0,0,1,0 ]: ' + parse('ooodsodo'))
+console.log('[ 1,1,1,1,1 ]: ' + parse('iooososo'))
+console.log('[ 1,1,0,0 ]: ' + parse('ioosdsoo'))
+console.log('[ 9,9 ]: ' + parse('didddsoo'))
