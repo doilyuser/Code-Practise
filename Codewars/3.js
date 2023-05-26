@@ -3,16 +3,11 @@
 // Note: Your answer should always be 6 characters long, the shorthand with 3 will not work here.
 
 export default function rgb(r, g, b) {
-  if (r < 0) r = 0
-  if (g < 0) g = 0
-  if (b < 0) b = 0
-  if (r > 255) r = 255
-  if (g > 255) g = 255
-  if (b > 255) b = 255
-  const rHex = r.toString(16).toUpperCase().padStart(2, '0')
-  const gHex = g.toString(16).toUpperCase().padStart(2, '0')
-  const bHex = b.toString(16).toUpperCase().padStart(2, '0')
-  return `${rHex}${gHex}${bHex}`
+  const round = (n) => Math.max(0, Math.min(255, n))
+
+  const toHex = (n) => n.toString(16).toUpperCase().padStart(2, '0')
+
+  return `${toHex(round(r))}${toHex(round(g))}${toHex(round(b))}`
 }
 
 console.log(rgb(0, 0, 0) + ' = 000000')
