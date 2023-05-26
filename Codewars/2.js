@@ -31,11 +31,11 @@ export default function parse(data) {
 
 // TESTS:
 
-console.log('[ 0,-1 ]: ' + parse('ssoisddo'))
-console.log('[ 0,0,0,-1,-1 ]: ' + parse('odioodoo'))
-console.log('[ 8,8,8 ]: ' + parse('dddsdooo'))
-console.log('[ 10,10 ]: ' + parse('ddsdsioo'))
-console.log('[ 0,0,0,1,0 ]: ' + parse('ooodsodo'))
-console.log('[ 1,1,1,1,1 ]: ' + parse('iooososo'))
-console.log('[ 1,1,0,0 ]: ' + parse('ioosdsoo'))
-console.log('[ 9,9 ]: ' + parse('didddsoo'))
+// console.log('[ 0,-1 ]: ' + parse('ssoisddo'))
+// console.log('[ 0,0,0,-1,-1 ]: ' + parse('odioodoo'))
+// console.log('[ 8,8,8 ]: ' + parse('dddsdooo'))
+// console.log('[ 10,10 ]: ' + parse('ddsdsioo'))
+// console.log('[ 0,0,0,1,0 ]: ' + parse('ooodsodo'))
+// console.log('[ 1,1,1,1,1 ]: ' + parse('iooososo'))
+// console.log('[ 1,1,0,0 ]: ' + parse('ioosdsoo'))
+// console.log('[ 9,9 ]: ' + parse('didddsoo'))
