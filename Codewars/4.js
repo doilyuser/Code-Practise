@@ -9,16 +9,16 @@
 // My Solution:
 
 export default function validPhoneNumber(phoneNumber) {
-  const regex = /^[(][0-9]{3}[)][\s][0-9]{3}[-][0-9]{4}$/
+  const regex = /^\(\d{3}\)\s\d{3}-\d{4}$/
   return regex.test(phoneNumber) ? true : false
 }
 
 // Tests:
 
-console.log(validPhoneNumber('(123) 456-7890') + ' = true')
-console.log(validPhoneNumber('123 456-7890') + ' = false')
-console.log(validPhoneNumber('(1111)555 2345') + ' = false')
-console.log(validPhoneNumber('(098) 123 4567') + ' = false')
+// console.log(validPhoneNumber('(123) 456-7890') + ' = true')
+// console.log(validPhoneNumber('123 456-7890') + ' = false')
+// console.log(validPhoneNumber('(1111)555 2345') + ' = false')
+// console.log(validPhoneNumber('(098) 123 4567') + ' = false')
 
 // Other solutions online:
 
