@@ -10,15 +10,8 @@
 //   -  NOTE on performance: There are no fancy optimizations required, but still the most trivial solutions might time out. Numbers go up to  2^31 ( or similar, depending on language ). Looping all the way up to n, or n/2, will be too slow.
 
 export default function isPrime(num) {
-  if (num <= 1) return false
-
-  if (num % 2 === 0 && num > 2) return false
-
-  for (let i = 2, s = Math.sqrt(num); i <= s; i++) {
-    if (num % i === 0) return false
-  }
-
-  return true
+  for (let i = 2; i <= Math.sqrt(num); i++) if (num % i === 0) return false
+  return num > 1
 }
 
 console.log(isPrime(0), false, '0 is not prime')
