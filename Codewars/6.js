@@ -14,6 +14,8 @@
 
 // For the sake of simplicity, you can assume that any numbers passed into the function will correspond to vowels.
 
+// My solution:
+
 export function encode(string) {
   return string
     .replace(/a/gi, 1)
@@ -32,8 +34,20 @@ export function decode(string) {
     .replace('5', 'u')
 }
 
+// Tests:
+
 console.log(encode('hello'), ' = h2ll4')
 console.log(encode('HELLO'), ' = H2LL4')
 console.log(encode('How are you today?'), ' = H4w 1r2 y45 t4d1y?')
 console.log(encode('This is an encoding test.'), ' = Th3s 3s 1n 2nc4d3ng t2st.')
 console.log(decode('h2ll4'), ' = hello')
+
+// Other solution online:
+
+// function encode(string){
+//   return string.replace(/[aeiou]/g, function (x) { return '_aeiou'.indexOf(x) });
+// }
+
+// function decode(string){
+//   return string.replace(/[1-5]/g, function (x) { return '_aeiou'.charAt(x) });
+// }
